@@ -1372,3 +1372,5 @@
 import utility
 import shoping.shoping_card
 print(shoping.shoping_card.buy('lime'))
+print('Helo word 123')
+print('test for git')
