@@ -1369,8 +1369,36 @@
 #     return result
 #
 # print(fib2(20))
-import utility
-import shoping.shoping_card
-print(shoping.shoping_card.buy('lime'))
-print('Helo word 123')
-print('test for git')
+# import utility
+# import shoping.shoping_card
+# print(shoping.shoping_card.buy('lime'))
+# print('Helo word 123')
+# print('test for git')
+# l = [132, 'string', 8.8]
+# print(len(l))
+# print(l[1])
+# print(l[:-1])
+# print(l+ [4, 'second str', True])
+# l.append('Added str')
+# print(l)
+# l.pop(2)
+# print(l)
+# s = [4, 56, 11.2, 11]
+# s.sort()
+# print(s)
+# s.reverse()
+# print(s)
+q = [
+    [1, 25, 3],
+    ['a', 2, 'v'],
+    [1, 5, 11.2]
+]
+print(q)
+q[0].sort()
+print(q[0][2])
+col2 = [row[1] for row in q]
+print(col2)
+col = [row[1]+1 for row in q]
+print(col)
+col3 = [row[1] for row in q if row[1] % 2 == 0]
+print(col3)
