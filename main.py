@@ -1226,7 +1226,7 @@
 #     print('see you later')
 # hello2 = my_decorator(hello)
 # hello2()
-
+#
 # def my_decorator(func):
 #     def wrat_func(*args, **kwargs):
 #         print ('*********')
@@ -1388,17 +1388,663 @@
 # print(s)
 # s.reverse()
 # print(s)
-q = [
-    [1, 25, 3],
-    ['a', 2, 'v'],
-    [1, 5, 11.2]
-]
-print(q)
-q[0].sort()
-print(q[0][2])
-col2 = [row[1] for row in q]
-print(col2)
-col = [row[1]+1 for row in q]
-print(col)
-col3 = [row[1] for row in q if row[1] % 2 == 0]
-print(col3)
+# q = [
+#     [1, 25, 3],
+#     ['a', 2, 'v'],
+#     [1, 5, 11.2]
+# ]
+# print(q)
+# q[0].sort()
+# print(q[0][2])
+# col2 = [row[1] for row in q]
+# print(col2)
+# col = [row[1]+1 for row in q]
+# print(col)
+# col3 = [row[1] for row in q if row[1] % 2 == 0]
+# print(col3)
+# print(abs(round(-15.5))
+# n = 'Viktor'
+# y = 33
+# print('test name {} and test age {} years'.format(n, y))
+# print(len('asdasd'))
+# print(bool(0))
+# birth_year = int(input('What is your year of born \n'))
+# year_of_born = 2022 - birth_year
+# print(f'your age is {year_of_born} years old')
+# user_name = input('Enter your name \n\n')
+# user_password = input('Enter your password \n\n')
+# password_len = len(user_password)
+# hide_pas_long = password_len * '*'
+# print(f'{user_name} your password is {hide_pas_long} is {password_len} letters long')
+# am_card = [
+#     'zero',
+#     'first',
+#     'second',
+#     'trird',
+#     'four'
+# ]
+# am_card[0] = 'new'
+# print(am_card[0::3])
+# print(am_card[1:4])
+# print(am_card)
+# apple = 6
+# childer = 6
+# aplle_for_chield = 1
+# was_eated = childer * aplle_for_chield
+# remainder = was_eated - apple
+#
+# print(remainder)
+# l = [1, 2, 3, 4, 5]
+# # l2 = l.append(100)
+# l2 = l
+# l2.append(100)
+# l2.insert(2, 50)
+# l2.extend([50, 55])
+# l2.pop()
+# print(l2.pop(2))
+# l2.remove(100)
+# print(l2)
+# s = ['a', 'b', 'c', 'd', 'e', 'a', 'e', 'c']
+# s.sort()
+# s.reverse()
+# print(s[::-1])
+# print(list(range(50, 100)))
+# a, b, c, *other = range(0, 20)
+# print(other)
+# dictionary = {
+#     'user1': ['Viktor', 12, True],
+#     'user2': 21,
+#     'user3': True
+# }
+# print('user1' in dictionary.keys())
+# print(21 in dictionary.values())
+# print(dictionary.items())
+
+# print(dictionary['user1'][1:3])
+# test_user = dict(name = 'Vova')
+# print(test_user)
+
+# list_dict = [
+#     {
+#         'user1': ['Viktor', 12, True],
+#         'user2': 21,
+#         'user3': True
+#     },
+#     {
+#         'a': 2,
+#         'b': 3,
+#         'c': 4
+#     }
+# ]
+# print(list_dict[0]['user1'][1])
+
+# counter = 0
+# counter += 1
+# counter += 1
+# counter += 1
+# counter += 1
+# counter -= 1
+# counter *=2
+# print(counter)
+# print("Hello {}, your balance is {}.".format("Cindy", 50))
+# print("Hello {0}, your balance is {1}.".format("Cindy", 50))
+# print("Hello {name}, your balance is {amount}.".format(name="Cindy", amount=50))
+# print("Hello {0}, your balance is {amount}.".format("Cindy", amount=50))
+# python = 'I am PYHTON'
+# print(python[1:4])
+# print(python[1:])
+# print(python[:])
+# print(python[1:100])
+# print(python[-1])
+# print(python[-4])
+# print(python[:-3])
+# print(python[-3:])
+# print(python[::-1])
+# new_list = ['a', 'b', 'c']
+# print(new_list[1])
+# print(new_list[-2])
+# print(new_list[1:3])
+# new_list[0] = 'z'
+# print(new_list)
+#
+# my_list = [1,2,3]
+# bonus = my_list + [5]
+# my_list[0] = 'z'
+# print(my_list)
+# print(bonus)
+# basket = ["Banana", ["Apples", ["Oranges"], "Blueberries"]];
+# print(basket[1][1])
+# basket = ["Banana", "Apples", "Oranges", "Blueberries"];
+# basket.remove('Banana')
+# basket.pop(2)
+# basket.append('Kiwi')
+# basket.insert(1, 'Apples')
+# print(basket.count('Apples'))
+# print(basket)
+# basket.clear()
+# print(basket)
+# friends = ['Simon', 'Patty', 'Joy', 'Carrie', 'Amira', 'Chu']
+# friends = friends + ['Stanley']
+# friends.sort()
+# print(friends)
+# user_profile = {
+#     'age': 34,
+#     'username': 'Viktor',
+#     'weapons': 'snow bal',
+#     'is active': True,
+#     'clan': 'Humsters'
+# }
+# print(user_profile.keys())
+# user_profile.update({'weapons': 'Gun', 'is_banned': False})
+# user_profile['is_baned'] = True
+# user_profile1 = user_profile.copy()
+# user_profile1.update({'age': 50, 'username': 'Ken'})
+# print(user_profile1)
+# print(user_profile)
+
+# my_tuple = (1,2,3,4,5,5,5)
+# new_tuple = my_tuple[1:2]
+# print(my_tuple.count(5))
+# print(my_tuple.index(5))
+# print(len(my_tuple))
+# my_list = [1, 2, 3, 3, 4, 5, 5]
+# my_set = set(my_list)
+# second_set = my_set.copy()
+# my_set = {1, 2, 3, 4, 5}
+# my_set2 = {4, 5}
+# dif_set = {4, 5, 6, 7 , 8}
+# print(my_set.difference(dif_set))
+# my_set.discard(5)
+# my_set.difference_update(dif_set)
+# int_set = my_set.intersection(dif_set)
+# print(int_set)
+# isdisjoin_set = my_set.isdisjoint(dif_set) or intersection_set = my_set & dif_set
+# print(isdisjoin_set)
+# union_set = my_set.union(dif_set) or union_set = my_set | dif_set
+# print(union_set)
+# issubset_set1 = my_set.issubset(dif_set)
+# issubset_set2 = my_set2.issubset(dif_set)
+# print(issubset_set1)
+# print(issubset_set2)
+# issuperset_set1 = my_set.issuperset(dif_set)
+# issuperset_set2 = dif_set.issuperset(my_set2)
+# print(issuperset_set1)
+# print(issuperset_set2)
+#
+# is_old = False
+# is_license = False
+# if is_old and is_license:
+#     print('You have license and you age is sufficient to drive')
+# elif is_old:
+#     print('You must have driving license')
+# elif is_license:
+#     print('You are very young to drive')
+# else:
+#     print('You are very young and doesn\'t have driving license')
+# print('Check driver is finished')
+# can_breathe = False
+# is_live = 'I am a live' if can_breathe else 'I\'m die'
+# print(is_live)
+# is_magician = False
+# is_expert = False
+# if is_magician and is_expert:
+#     print('you are the master magician')
+# elif is_magician and not is_expert:
+#     print('at least you are getting there')
+# elif not is_magician:
+#     print('You need magic power')
+#
+# if is_magician and is_expert:
+#     print('you are the master magician')
+# else:
+#     text_for_mag = 'at least you are getting there' if is_magician else 'You need magic power'
+#     print(text_for_mag)
+# user = {
+#     'name': 'Golem',
+#     'age': 5000,
+#     'can_swim': False
+# }
+# for key, value in user.items():
+#     print(key, value)
+# for item in user.values():
+#     print(item)
+# for item in user.keys():
+#     print(item)
+# for item in user.items():
+#     print(item)
+# my_list = list(range(0, 11))
+# print(my_list)
+# print(sum(my_list))
+#
+# counter = 0
+# for i in my_list:
+#     counter = counter + i
+# print(counter)
+
+# for i,char in enumerate(list(range(0, 100))):
+#     # if i % 2 == 0:
+#     if char == 50:
+#         print(f'index of 50 is {i}')
+
+# i = 0
+# while i < 50:
+#     i += 5
+#     print(i)
+# else:
+#     print('we got 50')
+
+# while True:
+#     input('enter data: ')
+#     break
+# while True:
+#     response = input('say something:')
+#     if response == '1':
+#         break
+# picture = [
+#     [0, 0, 0, 1, 0, 0, 0],
+#     [0, 0, 1, 1, 1, 0, 0],
+#     [0, 1, 1, 1, 1, 1, 0],
+#     [1, 1, 1, 1, 1, 1, 1],
+#     [0, 0, 0, 1, 0, 0, 0],
+#     [0, 0, 0, 1, 0, 0, 0]
+# ]
+# for line in picture:
+#     for pixel in line:
+#         i = '*' if pixel else ' '
+#         print(i, end='')
+#         # if pixel == 0:
+#         #     print(' ', end='')
+#         # else:
+#         #     print('*', end='')
+#     print('')
+# some_list = ['a', 'b', 'c', 'b', 'd', 'm', 'n', 'n']
+# new_list = []
+# for item in some_list:
+#     if some_list.count(item) > 1:
+#         new_list.append(item)
+# print(new_list)
+# def name(*args):
+#     data = args * 2
+#     print(data)
+# name('Sergei', 'Viktor')
+def progres():
+    curent = int(input('Введите текущий номер урока: '))
+    les_lessons = 333 - curent
+    processed_lessons = (100 / 333) * curent
+    persent_of_finished = 100 - processed_lessons
+    print(f'Finished {curent} lessons, les to learn {les_lessons}. Current progress {int(processed_lessons)}')
+
+
+# def sum(num1, num2):
+#     def another_sum(n1, n2):
+#         total = n1 + n2
+#         return total
+#     return another_sum(num1, num2)
+# total = sum(10, 20)
+# print(total)
+# def check_age():
+#     age = int(input('What is your age?: '))
+#     if age < 18:
+#         print('Powering off')
+#     elif age > 18:
+#         print('Powering On.');
+#     elif age == 18:
+#         print('Enjoy the ride!')
+#     return print()
+# check_age()
+# def test(a):
+#     '''
+#     :param a: Take any value
+#     :return: Print param a
+#     '''
+#     print(a)
+# help(test)
+# print(test.__doc__)
+
+# def is_even(num):
+#     return num % 2 == 0
+# print(is_even(4))
+
+# def sum_of_elements(*args):
+#     return sum(args)
+# print(sum_of_elements(1, 2, 3))
+
+# # Rule: params, *args, default parameters, **kwargs
+# def sum_of_elements(*args, **kwargs):
+#     total = 0
+#     for items in kwargs.values():
+#         total += items
+#     return sum(args) + total
+# print(sum_of_elements(1, 2, 3, 4, 5, a = 5, b = 10))
+
+# def highest_even(*args):
+#     our_list = []
+#     for iten in args:
+#         if iten % 2 == 0:
+#             our_list.append(iten)
+#     our_list.sort()
+#     return our_list[-1]
+#
+#
+# def highest_even_other_way(*args):  # Other way
+#     return max([i for i in args if i % 2 == 0])
+#
+#
+# print(highest_even(10, 2, 3,20, 8, 11, 12))
+# print(highest_even_other_way(10, 2, 3, 20, 8, 11, 12))
+
+# a = 'Viktor'
+# if ((n := len(a)) > 2):
+#      print(f'To long {n} elements')
+#
+# while ((n := len(a)) > 1):
+#     print(n)
+#     a = a[:-1]
+# print(a)
+# a = 1
+
+
+# def parent():
+#     a = 10
+#
+#     def conf():
+#         return a
+#     return conf()
+# print(a)
+# print(parent())
+# total = 0
+# def counter():
+#     global total
+#     total += 1
+#     return total
+# counter()
+# counter()
+# print(counter())
+
+# def outer():
+#     x = "local"
+#     def inner():
+#         nonlocal x
+#         x = "nonlocal"
+#         print("inner:", x)
+#     inner()
+#     print("outer:", x)
+# outer()
+
+# class PlayerCharacter:
+#     membership = True
+#
+#     def __init__(self, name, age):
+#         if (PlayerCharacter.membership):
+#             self.name = name
+#             self.age = age
+#
+#     def run(self):
+#         print('Run')
+#         return 'Run'
+#
+#     def shout(self):
+#         print('Boom')
+#
+#
+# player1 = PlayerCharacter('Viktor', 34)
+# player2 = PlayerCharacter(8, "Gleb")
+#
+# print(player1)
+# print(player1.name, ',', player2.name)
+# print(player1.age, player2.age)
+# print(player1.run())
+# print(player2.shout())
+
+# class Cat:
+#     species = 'mammal'
+#
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#
+# cat1 = Cat('Tom', 15)
+# cat2 = Cat('Black', 5)
+# cat3 = Cat('White', 15)
+# list_of_cats = [cat1, cat2, cat3]
+#
+#
+# def group_cat_by_age(all_cats):
+#     dict_test = {}
+#     for cat in all_cats:
+#         if cat.age not in dict_test:
+#             dict_test.update({cat.age: [cat]})
+#         elif cat.age in dict_test:
+#             test = dict_test[cat.age]
+#             test.append(cat)
+#     return dict_test
+#
+#
+# grouped_cats = group_cat_by_age(list_of_cats)
+#
+#
+# def get_oldest_key_for_age(our_groups_of_cats):
+#     max_age_key = max(our_groups_of_cats.keys())
+#     return max_age_key
+#
+#
+# max_age_key = get_oldest_key_for_age(grouped_cats)
+#
+#
+# def oldest_cat(all_cats, max_age_key=get_oldest_key_for_age(grouped_cats)):
+#     age = max_age_key
+#     cats_match_witch_age = []
+#     for cat in all_cats:
+#         if cat.age == age:
+#             cats_match_witch_age.append(cat.name)
+#     cats_name = ' '.join(cats_match_witch_age)
+#     print(f'The oldest cat is {cats_name}, he is {age} years old.')
+#
+#
+# oldest_cat(list_of_cats)
+
+# class PlayerCharacter:
+#     membership = True
+#
+#     def __init__(self, name, age):
+#         if (PlayerCharacter.membership):
+#             self.name = name
+#             self.age = age
+#
+#     def run(self):
+#         print('Run')
+#         return 'Run'
+#
+#     def shout(self):
+#         print('Boom')
+#
+#     @classmethod
+#     def adding_things(cls, num1, num2):
+#         return cls('Vlad', num1 + num2)
+#     @staticmethod
+#     def adding_things2(num1, num2):
+#         return num1 + num2
+#
+# player1 = PlayerCharacter('Viktor', 34)
+# player2 = PlayerCharacter(8, "Gleb")
+#
+# print(PlayerCharacter.adding_things(3, 2))
+# print(player1.adding_things(8, 2))
+#
+# class PlayerCharacter:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def run(self):
+#         return self
+#
+#     def speak(self):
+#         print(f'My name is {self.name} and i am {self.age} years old')
+# player1 = PlayerCharacter('Viktor', 34)
+# print(player1.run())
+# player1.speak()
+
+
+
+# class Pets():
+#     animals = []
+#
+#     def __init__(self, animals):
+#         self.animals = animals
+#
+#     def walk(self):
+#         for animal in self.animals:
+#             print(animal.walk())
+#
+#
+# class Cat(Pets):
+#     is_lazy = True
+#
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+#
+#     def walk(self):
+#         return f'{self.name} is just walking around'
+#
+#
+# class Simon(Cat):
+#     def sing(self, sounds):
+#         return f'{sounds}'
+#
+#
+# class Sally(Cat):
+#     def sing(self, sounds):
+#         return f'{sounds}'
+#
+#
+# class Tom(Cat):
+#     def sing(self, sounds):
+#         return f(sounds)
+#
+#
+# my_cats = [Simon('First', 11), Sally('Second', 15), Tom('Third', 8)]
+#
+# my_pets = Pets(my_cats)
+#
+# my_pets.walk()
+
+
+
+# class Lion:
+#     def __init__(self, name):
+#         self.name = name
+#
+#     # def __rept__(self):
+#     #     return f'The object- {self.name}'
+#
+#     def __str__(self):
+#         return f'{self.name}'
+#
+# lion1 = Lion('Simba')
+# lion1
+# print(lion1)
+
+# class SuperList(list):
+#   def __len__(self):
+#     return 10
+#
+# sup_list1 = SuperList()
+# print(len(sup_list1))
+#
+# sup_list1.append('appended data')
+# print(sup_list1[0])
+
+# class User():
+#     def __init__(self, email):
+#         self.email = email
+#
+#     def sing_in(self):
+#         print('logged in')
+#
+#
+# class Wizard(User):
+#     def __init__(self, name, power, email):
+#         User.__init__(self, email)
+#         # super().__init__(email)  ## other way
+#         self.name = name
+#         self.power = power
+#
+#     def attack(self):
+#         print(f'attaking with pover of {self.power}')
+#
+#
+# class Archer(User):
+#     def __init__(self, name, num_arrows):
+#         self.name = name
+#         self.num_arrows = num_arrows
+#
+#     def attack(self):
+#         print(f'attaking with arrows: arrow left - {self.num_arrows}')
+#
+# wizard0 = Wizard('Kaldynio', 30, 'test@gmai.com')
+# wizard1 = Wizard('Merlin', 50, 'mail@gmail.com')
+# print(wizard0.email)
+# print(dir(wizard0))
+
+# class User():
+#
+#     def sing_in(self):
+#         print('logged in')
+#
+#
+# class Wizard(User):
+#     def __init__(self, name, power):
+#         self.name = name
+#         self.power = power
+#
+#     def attack(self):
+#         print(f'attaking with pover of {self.power}')
+#
+#
+# class Archer(User):
+#     def __init__(self, name, arrows):
+#         self.name = name
+#         self.arrows = arrows
+#
+#     def check_arrow(self):
+#         print(f'attaking with arrows: arrow left - {self.arrows}')
+#
+#     def run(self):
+#         print ('run realy fast')
+#
+# wizard0 = Wizard('Kaldynio', 30)
+# archer0 = Archer('Merlin', 50)
+#
+# class HybridBorg(Wizard, Archer):
+#     def __init__(self, name, power, arrows):
+#         Archer.__init__(self, name, arrows)
+#         Wizard.__init__(self,name, power)
+#
+# hybrid_borg0 = HybridBorg('Borgy', 50, 12)
+# print(hybrid_borg0.check_arrow())
+
+# class A:
+#     def process(self):
+#         print('A process()')
+#
+#
+# class B:
+#     def process(self):
+#         print('B process()')
+#
+# class C(B, A):
+#     pass
+#
+# obj = C()
+# obj.process()
+
+class X:pass
+class Y: pass
+class Z:pass
+class A(X,Y):pass
+class B(Y,Z):pass
+class M(B,A,Z):pass
+print(M.mro())
