@@ -1887,7 +1887,6 @@ def progres():
 # player1.speak()
 
 
-
 # class Pets():
 #     animals = []
 #
@@ -1930,7 +1929,6 @@ def progres():
 # my_pets = Pets(my_cats)
 #
 # my_pets.walk()
-
 
 
 # class Lion:
@@ -2008,7 +2006,7 @@ def progres():
 #     def __init__(self, name, arrows):
 #         self.name = name
 #         self.arrows = arrows
-#
+# #
 #     def check_arrow(self):
 #         print(f'attaking with arrows: arrow left - {self.arrows}')
 #
@@ -2049,8 +2047,27 @@ def progres():
 # class M(B,A,Z):pass
 # print(M.mro())
 
-def multy_by2(li):
-    new_li = []
-    if item in li:
-        item = item * 2
-        new_li
+# map, filte, zip, reduce
+# map return object what was given after processing doesn't effekt outside
+
+my_list = [8, 9, 10]
+
+
+# def multy_by(item):
+#     return item * 2
+#
+#
+# print(list(map(multy_by, my_list)))
+# print(my_list)
+
+# filter process object acoding to function
+# def only_odd(item):
+#     return item % 2 != 0
+#
+#
+# print(list(filter(only_odd, my_list)))
+
+# your_list = [20, 40, 50]
+# conect object that were gave
+# print(list(zip(my_list, your_list)))
+
