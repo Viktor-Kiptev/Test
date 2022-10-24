@@ -2041,10 +2041,16 @@ def progres():
 # obj = C()
 # obj.process()
 
-class X:pass
-class Y: pass
-class Z:pass
-class A(X,Y):pass
-class B(Y,Z):pass
-class M(B,A,Z):pass
-print(M.mro())
+# class X:pass
+# class Y: pass
+# class Z:pass
+# class A(X,Y):pass
+# class B(Y,Z):pass
+# class M(B,A,Z):pass
+# print(M.mro())
+
+def multy_by2(li):
+    new_li = []
+    if item in li:
+        item = item * 2
+        new_li
