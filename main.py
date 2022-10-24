@@ -2050,7 +2050,7 @@ def progres():
 # map, filte, zip, reduce
 # map return object what was given after processing doesn't effekt outside
 
-my_list = [8, 9, 10]
+# my_list = [8, 9, 10]
 
 
 # def multy_by(item):
@@ -2070,4 +2070,8 @@ my_list = [8, 9, 10]
 # your_list = [20, 40, 50]
 # conect object that were gave
 # print(list(zip(my_list, your_list)))
-
+# from functools import reduce
+# their_list = 6, 7, 8
+# def accumulator(acc, item):
+#     return acc + item
+# print(reduce(accumulator, my_list, 0))
