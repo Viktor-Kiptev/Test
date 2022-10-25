@@ -2075,3 +2075,46 @@ def progres():
 # def accumulator(acc, item):
 #     return acc + item
 # print(reduce(accumulator, my_list, 0))
+
+from functools import reduce
+
+my_pets = ['sisi', 'bibi', 'titi', 'carla']
+
+
+def cappitalize_list2(pet_name):
+    return pet_name.upper()
+
+
+print(list(map(cappitalize_list2, my_pets)))
+
+
+def cappitalize_list(li):
+    cap_list = []
+    for item in li:
+        item = item.upper()
+        cap_list.append(item)
+    return cap_list
+
+
+print(cappitalize_list(my_pets))
+
+my_strings = ['a', 'b', 'c', 'd', 'e']
+my_numbers = [5, 4, 3, 2, 1]
+
+print(list(zip((set(my_numbers)), my_strings)))
+
+scores = [73, 20, 65, 19, 76, 100, 88]
+
+
+def over_50(item):
+    return item >= 50
+
+
+print(list(filter(over_50, scores)))
+
+
+def acc(acc, item):
+    return acc + item
+
+
+print(reduce(acc, (my_numbers + scores), 0))
