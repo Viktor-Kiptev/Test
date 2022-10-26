@@ -2096,6 +2096,7 @@ def cappitalize_list(li):
     return cap_list
 
 
+
 print(cappitalize_list(my_pets))
 
 my_strings = ['a', 'b', 'c', 'd', 'e']
