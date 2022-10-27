@@ -2249,3 +2249,28 @@ from datetime import datetime
 #
 # message_friends(user1)
 
+
+# ERROR HANDLING
+
+
+while True:
+    try:
+        age = int(input('What is your age  '))
+        10/age
+    except ValueError:
+        print('please enter a number')
+    except ZeroDivisionError:
+        print('please enter age higher than zero')
+    else:
+        print('thanks')
+        break
+    finally:
+        print('all code performed')
+
+# def some_sum (num1, num2):
+#     try:
+#         return num1+num2
+#     except TypeError as err:
+#         print(f'please enter number {err}')
+#
+# print(some_sum(1, '2'))
