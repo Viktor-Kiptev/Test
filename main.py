@@ -2253,19 +2253,19 @@ from datetime import datetime
 # ERROR HANDLING
 
 
-while True:
-    try:
-        age = int(input('What is your age  '))
-        10/age
-    except ValueError:
-        print('please enter a number')
-    except ZeroDivisionError:
-        print('please enter age higher than zero')
-    else:
-        print('thanks')
-        break
-    finally:
-        print('all code performed')
+# while True:
+#     try:
+#         age = int(input('What is your age  '))
+#         10/age
+#     except ValueError:
+#         print('please enter a number')
+#     except ZeroDivisionError:
+#         print('please enter age higher than zero')
+#     else:
+#         print('thanks')
+#         break
+#     finally:
+#         print('all code performed')
 
 # def some_sum (num1, num2):
 #     try:
