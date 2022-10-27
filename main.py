@@ -2078,44 +2078,174 @@ def progres():
 
 from functools import reduce
 
-my_pets = ['sisi', 'bibi', 'titi', 'carla']
+#
+# my_pets = ['sisi', 'bibi', 'titi', 'carla']
+#
+#
+# def cappitalize_list2(pet_name):
+#     return pet_name.upper()
+#
+#
+# print(list(map(cappitalize_list2, my_pets)))
+#
+#
+# def cappitalize_list(li):
+#     cap_list = []
+#     for item in li:
+#         item = item.upper()
+#         cap_list.append(item)
+#     return cap_list
+#
+#
+#
+# print(cappitalize_list(my_pets))
+#
+# my_strings = ['a', 'b', 'c', 'd', 'e']
+# my_numbers = [5, 4, 3, 2, 1]
+#
+# print(list(zip((set(my_numbers)), my_strings)))
+#
+# scores = [73, 20, 65, 19, 76, 100, 88]
+#
+#
+# def over_50(item):
+#     return item >= 50
+#
+#
+# print(list(filter(over_50, scores)))
+#
+#
+# def acc(acc, item):
+#     return acc + item
+#
+#
+# print(reduce(acc, (my_numbers + scores), 0))
+
+# lambda param: action(param)
+
+# test_list = [1, 2, 3, 4, 5, 7, 8]
+#
+# print(list(map(lambda item: item * 2, test_list)))
+#
+# print(list(filter(lambda item: item % 2 != 0, test_list)))
+#
+# print(reduce(lambda acc, item: item + acc, test_list))
+
+# my_list = [5, 4, 3]
+# print(list(map(lambda item: item ** 2, my_list)))
+# a = [(0, 2), (4, 3), (9, 9), (10, -1)]
+# print(list(map(lambda )))
+# a.sort(key=lambda x: x[1])
+# print(a)
+
+# my_list = [param for param in iterable]
+
+# my_list = [char for char in 'hello']
+# my_list2 = [num for num in range(0, 10)]
+# my_list3 = [num ** 2 for num in range(0, 10)]
+#
+# my_list5 = [num **2 for num in range(0, 10) if num % 2 != 0]
+# print(my_list2)
+# print(my_list)
+# print(my_list3)
+#
+# print(my_list5)
+
+# simple_dict = {
+#     'a': 1,
+#     'b': 2
+# }
+# my_dict = {key:value ** 2 for key, value in simple_dict.items()}
+# print(my_dict)
+# my_dict2 = {num:num * 2 for num in [1, 2, 3]}
+# print(my_dict2)
+#
+# some_list = ['a', 'b', 'c', 'd', 'b', 'm', 'n', 'n']
+# new_list = list({item for item in some_list if some_list.count(item) > 1})
+# print(new_list)
 
 
-def cappitalize_list2(pet_name):
-    return pet_name.upper()
+# DECORATOR
+
+# def my_decorator(func):
+#     def wrap_func():
+#         func()
+#     return wrap_func()
+# def my_decorator(func):
+#     def wrap_func():
+#         print('******')
+#         func()
+#         print('******')
+#     return wrap_func
+# @my_decorator
+# def hello():
+#     print('hello')
+# hello()
+
+# def my_decorator(func):
+#     def wrap_func(*args, **kwargs):
+#         print('******')
+#         func(*args, **kwargs)
+#         print('******')
+#     return wrap_func
+# @my_decorator
+# def hello(some_string):
+#     print(some_string)
+# hello('123')
+
+# def my_decorator(func):
+#     def wrap_func(*args, **kwargs):
+#         func(*args, **kwargs)
+#     return wrap_func()
+#
+# @my_decorator
+# def func(*args, **kwargs):
+#     print(*args, **kwargs)
+
+from time import time
+from datetime import datetime
+
+#
+# def perfomance(fn):
+#     def wrapper_func(*args, **kwargs):
+#         t1 = time()
+#         result = fn(*args, **kwargs)
+#         t2 = time()
+#         print(f'took {t2 - t1} ms')
+#         return result
+#
+#     return wrapper_func
+#
+#
+# @perfomance
+# def long_time():
+#     for i in range(10000000):
+#         i * 5
+#
+#
+# long_time()
 
 
-print(list(map(cappitalize_list2, my_pets)))
+# user1 = {
+#     'name': 'Viktor',
+#     'valid': True
+# }
+#
+#
+# def authenticated(func):
+#     def check_valid(user):
+#         if user.get('valid') == True:
+#             func(user)
+#         else:
+#             print('message hasn\'t been sent')
+#
+#     return check_valid
+#
+#
+# @authenticated
+# def message_friends(user):
+#     print('message has been sent')
+#
+#
+# message_friends(user1)
 
-
-def cappitalize_list(li):
-    cap_list = []
-    for item in li:
-        item = item.upper()
-        cap_list.append(item)
-    return cap_list
-
-
-
-print(cappitalize_list(my_pets))
-
-my_strings = ['a', 'b', 'c', 'd', 'e']
-my_numbers = [5, 4, 3, 2, 1]
-
-print(list(zip((set(my_numbers)), my_strings)))
-
-scores = [73, 20, 65, 19, 76, 100, 88]
-
-
-def over_50(item):
-    return item >= 50
-
-
-print(list(filter(over_50, scores)))
-
-
-def acc(acc, item):
-    return acc + item
-
-
-print(reduce(acc, (my_numbers + scores), 0))
