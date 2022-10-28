@@ -2290,6 +2290,8 @@ from datetime import datetime
 # GENERATOR
 
 from time import time
+
+
 # def performance(fn):
 #     def wrapper(*args, **kawrgs):
 #         t1 = time()
@@ -2326,12 +2328,34 @@ from time import time
 #     print(i)
 # print(list(generator_func(100)))
 
-def special_for(iterable):
-    iterator = iter(iterable)
-    while True:
-        try:
-            print(iterator)
-            next(iterator)
-        except StopIteration:
-            break
-special_for(['a', 'b', 'c', 'd'])
+# def special_for(iterable):
+#     iterator = iter(iterable)
+#     while True:
+#         try:
+#             print(iterator)
+#             next(iterator)
+#         except StopIteration:
+#             break
+# special_for(['a', 'b', 'c', 'd'])
+
+class MyGen():
+    current = 0
+
+    def __init__(self, first, last):
+        self.first = first
+        self.last = last
+
+    def __init_(self):
+        return self
+
+    def __next__(self):
+        if MyGen.current > self.last:
+            num = MyGen.current
+            MyGen.current += 1
+            return num
+        raise StopIteration
+
+
+gen = MyGen(10, 20)
+for i in gen:
+    print(i)
