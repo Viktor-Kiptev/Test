@@ -2274,3 +2274,64 @@ from datetime import datetime
 #         print(f'please enter number {err}')
 #
 # print(some_sum(1, '2'))
+# from random import random
+# def random_increase(quantity):
+#     cur = 0
+#     while quantity > 0:
+#         cur += random()
+#         quantity -= 1
+#         yield round(cur, 2)
+#
+#
+# generator = random_increase(5)
+# for i in generator:
+#     print(i)
+
+# GENERATOR
+
+from time import time
+# def performance(fn):
+#     def wrapper(*args, **kawrgs):
+#         t1 = time()
+#         result = fn(*args, **kawrgs)
+#         t2 = time()
+#         print(f'took {t2-t1} s')
+#         return result
+#     return wrapper
+#
+# @performance
+# def long_time():
+#     print('1')
+#     for i in range(100000000):
+#         i*5
+# @performance
+# def long_time2():
+#     print('2')
+#     for i in list(range(100000000)):
+#         i*5
+#
+#
+# long_time()
+# long_time2()
+
+# def generator_func(num):
+#     for i in range(num):
+#         yield i
+# a = generator_func(10)
+# print(next(a))
+# print(next(a))
+# print(next(a))
+# print(next(a))
+# for i in generator_func(50):
+#     print(i)
+# print(list(generator_func(100)))
+
+def special_for(iterable):
+    iterator = iter(iterable)
+    while True:
+        try:
+            print(iterator)
+            next(iterator)
+        except StopIteration:
+            break
+special_for(['a', 'b', 'c', 'd'])
