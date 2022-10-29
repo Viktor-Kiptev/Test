@@ -2338,24 +2338,50 @@ from time import time
 #             break
 # special_for(['a', 'b', 'c', 'd'])
 
-class MyGen():
-    current = 0
+# class MyGen:
+#     current = 0
+#
+#     def __init__(self, first, last):
+#         self.first = first
+#         self.last = last
+#         MyGen.current = self.first
+#
+#     def __iter__(self):
+#         return self
+#
+#     def __next__(self):
+#         if MyGen.current < self.last:
+#             num = MyGen.current
+#             MyGen.current += 1
+#             return num
+#         raise StopIteration
+#
+#
+# gen = MyGen(10, 50)
+# for i in gen:
+#     print(i)
 
-    def __init__(self, first, last):
-        self.first = first
-        self.last = last
-
-    def __init_(self):
-        return self
-
-    def __next__(self):
-        if MyGen.current > self.last:
-            num = MyGen.current
-            MyGen.current += 1
-            return num
-        raise StopIteration
-
-
-gen = MyGen(10, 20)
-for i in gen:
-    print(i)
+# def fib_while(number):
+#     count = 1
+#     fn = 0
+#     fn1 = 1
+#     fn0 = 0
+#     while count < number:
+#         fn = fn0 + fn1
+#         fn0 = fn1
+#         fn1 = fn
+#         count += 1
+#     return fn
+# print(fib_while(10))
+#
+# def fib_for(number):
+#     fn0 = 0
+#     fn1 = 1
+#     for i in range(number):
+#         yield fn0
+#         fn = fn0
+#         fn0 = fn1
+#         fn1 = fn + fn1
+#
+# for fib in fib_for(10):
+#     print(fib)

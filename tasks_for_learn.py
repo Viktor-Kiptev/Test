@@ -1,4 +1,7 @@
-# 1 """
+
+# Question 1
+
+# """
 # Write a program which will find all such numbers which are divisible by 7
 # but are not a multiple of 5, between 2000 and 3200 (both included).
 # The numbers obtained should be printed in a comma-separated sequence on a single line.
@@ -14,7 +17,9 @@
 #
 # print(*(i for i in range(2000, 3201) if i%7 == 0 and i%5 != 0), sep=",")
 
-# 2 """
+# Question 2
+
+# """
 # Write a program which can compute the factorial of a given numbers.
 # The results should be printed in a comma-separated sequence on a single line.
 # Suppose the following input is supplied to the program: 8 Then, the output should be:40320.
@@ -47,7 +52,9 @@
 #
 # print(factorial(n1))
 
-#3 """
+# Question 3
+
+# """
 # With a given integral number n, write a program to generate a dictionary that contains
 # (i, i x i) such that is an integral number between 1 and n (both included). and then
 # the program should print the dictionary.
@@ -56,3 +63,44 @@
 # Hint: In case of input data being supplied to the question,
 # it should be assumed to be a console input.Consider use dict()
 # """
+
+# try:
+#     your_num = int(input('Enter your number to create new dict '))
+# except ValueError as err:
+#     print(f'Use number {err}')
+#
+#
+# def create_dict(num):
+#     test_dict = {}
+#     my_range = range(1, num + 1)
+#     for i in my_range:
+#         test_dict.update({i: i * i})
+#     return test_dict
+#
+#
+# print(create_dict(your_num))
+#
+#
+# def create_dict2(num):
+#     test_dict = {}
+#     my_range = range(1, num + 1)
+#     for i in my_range:
+#         test_dict[i] = i * i
+#     return test_dict
+#
+#
+# print(create_dict2(your_num))
+#
+# test_dict2 = {i: i * i for i in range(1, your_num + 1)}
+# print(test_dict2)
+#
+# print(dict(enumerate([i * i for i in range(1, your_num + 1)], 1)))
+
+# Question 4
+
+# """Write a program which accepts a sequence of comma-separated numbers from console and generate a list
+# and a tuple which contains every number.Suppose the following input is supplied to the program:
+# 34,67,55,33,12,98
+# Then, the output should be: ['34', '67', '55', '33', '12', '98'] ('34', '67', '55', '33', '12', '98')
+# In case of input data being supplied to the question,
+# it should be assumed to be a console input.tuple() method can convert list to tuple"""
