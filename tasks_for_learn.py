@@ -1,4 +1,3 @@
-
 # Question 1
 
 # """
@@ -98,9 +97,54 @@
 
 # Question 4
 
-# """Write a program which accepts a sequence of comma-separated numbers from console and generate a list
+# Write a program which accepts a sequence of comma-separated numbers from console and generate a list
 # and a tuple which contains every number.Suppose the following input is supplied to the program:
 # 34,67,55,33,12,98
 # Then, the output should be: ['34', '67', '55', '33', '12', '98'] ('34', '67', '55', '33', '12', '98')
 # In case of input data being supplied to the question,
-# it should be assumed to be a console input.tuple() method can convert list to tuple"""
+# it should be assumed to be a console input.tuple() method can convert list to tuple
+
+
+# def return_list_and_tuple(counter):
+#     my_list = []
+#     while counter != 0:
+#         try:
+#             my_list.append(int(input(f'Enter your data for list left {counter} \n')))
+#             counter -= 1
+#         except ValueError as err:
+#             print(f'Use number {err}')
+#     my_tuple = tuple(my_list)
+#     return my_list, my_tuple
+#
+#
+# print(return_list_and_tuple(6))
+
+# my_list2 = list(input('Enter your data ').split(','))
+# my_tuple2 = tuple(my_list2)
+# print(my_list2, my_tuple2)
+
+# Question 5
+
+# Define a class which has at least two methods:
+# getString: to get a string from console input
+# printString: to print the string in upper case.
+# Also please include simple test function to test the class methods.
+#
+# Hints: Use init method to construct some parameters
+
+# class MyString():
+#
+#     def __init__(self):
+#         self.x = ''
+#
+#     def get_string(self):
+#         self.x = input('Enter your string \n')
+#
+#     def print_string_uper(self):
+#         print(self.x.upper())
+#
+#
+# test_str = MyString()
+# test_str.get_string()
+# test_str.print_string_uper()
+# print(test_str)
