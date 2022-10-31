@@ -2385,3 +2385,65 @@ from time import time
 #
 # for fib in fib_for(10):
 #     print(fib)
+
+
+from collections import Counter, defaultdict, OrderedDict
+
+# li = [1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 10]
+# print(Counter(li))
+#
+# sentense = 'bhla bhla boo'
+# print(Counter(sentense))
+
+# test_dict = {'a': 1, 'b': 2 }
+# print(dictionary['a'])
+
+# d = OrderedDict()
+# d['a'] = 1
+# d['b'] = 2
+#
+# d2 = OrderedDict()
+# d2['a'] = 1
+# d2['b'] = 2
+# print(d2 == d)
+
+import datetime
+
+# def time_to_smoke(*args):
+#     time_to_do = 16,20
+#     if args == time_to_do:
+#         while True:
+#             try:
+#                 nice_level = int(input('Pls enter your needs to awsome mood wuse value betwen 1 and 5\n'))
+#                 if 5 > nice_level > 0:
+#                     print(f'Nice you\'ll have {nice_level} puffs')
+#                     break
+#                 else:
+#                     print('Dood man i say you betwin 1 and 5')
+#             except ValueError as err:
+#                 print(f'Are you stupid? Type in a number! {err}')
+#         while nice_level > 0:
+#             nice_level -= 1 # Puff
+#             picture = [
+#                 [0, 0, 0, 1, 1, 1, 1],
+#                 [0, 0, 0, 1, 1, 1, 1],
+#                 [0, 1, 1, 0, 0, 1, 1],
+#                 [0, 1, 0, 1, 1, 1, 0],
+#                 [0, 1, 1, 1, 0, 0, 0],
+#                 [1, 0, 0, 0, 0, 0, 0]
+#             ]
+#             for line in picture:
+#                 for pixel in line:
+#                     i = '*' if pixel else ' '
+#                     print(i, end='')
+#                     if pixel == 0:
+#                         print(' ', end='')
+#                     else:
+#                         print('*', end='')
+#                 print('')
+# print(time_to_smoke(16,20))
+
+# from array import array
+# arr = array('i', [1, 2, 3, 4,])
+# print(arr)
+# print(arr[2])
