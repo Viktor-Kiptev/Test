@@ -10,6 +10,8 @@
 # print(type(8-20))
 # print(type(2*8))
 # print(9.1+ 1.1)
+import random
+
 
 # print(3**3) # возведение в степень
 # print(2//4) # деление без остатка
@@ -2076,8 +2078,6 @@ def progres():
 #     return acc + item
 # print(reduce(accumulator, my_list, 0))
 
-from functools import reduce
-
 #
 # my_pets = ['sisi', 'bibi', 'titi', 'carla']
 #
@@ -2202,9 +2202,6 @@ from functools import reduce
 # def func(*args, **kwargs):
 #     print(*args, **kwargs)
 
-from time import time
-from datetime import datetime
-
 #
 # def perfomance(fn):
 #     def wrapper_func(*args, **kwargs):
@@ -2288,8 +2285,6 @@ from datetime import datetime
 #     print(i)
 
 # GENERATOR
-
-from time import time
 
 
 # def performance(fn):
@@ -2387,8 +2382,6 @@ from time import time
 #     print(fib)
 
 
-from collections import Counter, defaultdict, OrderedDict
-
 # li = [1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 9, 9, 10]
 # print(Counter(li))
 #
@@ -2406,8 +2399,6 @@ from collections import Counter, defaultdict, OrderedDict
 # d2['a'] = 1
 # d2['b'] = 2
 # print(d2 == d)
-
-import datetime
 
 # def time_to_smoke(*args):
 #     time_to_do = 16,20
@@ -2448,24 +2439,22 @@ import datetime
 # print(arr)
 # print(arr[2])
 
-import pdb
-
 # def some_summ(num1, num2):
 #     pdb.set_trace()
 #     t = 4 * 5
 #     return num1 + num2
 # some_summ(4, 'asd')
 
-import re
-pattern = re.compile(r'([a-zA-Z]).([a])')
-some_str = "search this inside of this text please!"
-
-
-a = pattern.search(some_str)
-b = pattern.findall(some_str)
-c = pattern.fullmatch(some_str)
-d = pattern.match(some_str)
-print(a.groups())
+# pattern = re.compile(r'(^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$)')
+# some_email = "viktor-viktor@hotmail.com"
+#
+#
+# a = pattern.search(some_email)
+# b = pattern.findall(some_email)
+# c = pattern.fullmatch(some_email)
+# d = pattern.match(some_email)
+# print(a)
+# print(a.groups())
 # print(b)
 # print(c)
 # print(d)
@@ -2473,3 +2462,46 @@ print(a.groups())
 # print(a.span())
 # print(a.groups())
 # print(a.start())
+
+
+# a = None
+# while a == None:
+#     password = input('Enter your pass (use a-Z@#$% and min 8 sings): ')
+#     password_patern = re.compile(r'[a-zA-Z0-9@%$#]{8,}\d$')
+#     a = password_patern.fullmatch(password)
+#     if a != None:
+#         break
+#     else:
+#         print('You wrote wrong password')
+# print('You may use it password')
+
+# UNIT TEST
+# def do_stuff(num):
+#     try:
+#         if num:
+#             return int(num) + 5
+#         else:
+#             return 'Please enter number'
+#     except ValueError as err:
+#         return err
+
+def guess_game(user_num, answer):
+    if 0 < user_num < 11:
+        if user_num == answer:
+            print(f'Year you guess number was {answer}')
+            return True
+    else:
+        print('Pls between 1 - 10 ')
+        return False
+
+
+if __name__ == '__main__':
+    answer = random.randint(1, 10)
+    while True:
+        try:
+            user_num = int(input("Guess number between 1-10 \n "))
+            if guess_game(user_num, answer):
+                break
+        except ValueError as err:
+            print(f'You should use number {err}')
+            continue
