@@ -2447,3 +2447,29 @@ import datetime
 # arr = array('i', [1, 2, 3, 4,])
 # print(arr)
 # print(arr[2])
+
+import pdb
+
+# def some_summ(num1, num2):
+#     pdb.set_trace()
+#     t = 4 * 5
+#     return num1 + num2
+# some_summ(4, 'asd')
+
+import re
+pattern = re.compile(r'([a-zA-Z]).([a])')
+some_str = "search this inside of this text please!"
+
+
+a = pattern.search(some_str)
+b = pattern.findall(some_str)
+c = pattern.fullmatch(some_str)
+d = pattern.match(some_str)
+print(a.groups())
+# print(b)
+# print(c)
+# print(d)
+
+# print(a.span())
+# print(a.groups())
+# print(a.start())
