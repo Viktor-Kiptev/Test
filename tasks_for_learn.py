@@ -176,11 +176,11 @@
 
 # Qestion 7
 '''
-Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array. 
+Write a program which takes 2 digits, X,Y as input and generates a 2-dimensional array.
 The element value in the i-th row and j-th column of the array should be i _ j.*
 Note: i=0,1.., X-1; j=0,1,¡Y-1. Suppose the following inputs are given to the program: 3,5
 Then, the output of the program should be: [[0, 0, 0, 0, 0], [0, 1, 2, 3, 4], [0, 2, 4, 6, 8]]
-Hint: Note: In case of input data being supplied to the question, 
+Hint: Note: In case of input data being supplied to the question,
 it should be assumed to be a console input in a comma-separated form.
 '''
 
@@ -205,4 +205,53 @@ Then, the output should be: bag,hello,without,world
 Hint: In case of input data being supplied to the question, it should be assumed to be a console input.
 '''
 
+# my_list = sorted(list(input('Enter your words using coma \n').split(',')))
+# print(','.join(my_list))
+#
+# def my_func(e):
+#     return e[0]
+#
+# my_list = input('Enter a comma separated string: ').split(",")
+# my_list.sort(key=my_func)
+# print(",".join(my_list))
 
+# Question 9
+'''
+Write a program that accepts sequence of lines as input and 
+prints the lines after making all characters in the sentence capitalized.
+
+'''
+# text = list(input('to separate line use come ').split(','))
+# test_list = []
+# for i in text:
+#     test_list.append(i.upper())
+#
+# print('\n'.join(test_list))
+
+# def user_input():
+#     while True:
+#         x = input()
+#         if not x:
+#             break
+#         yield x
+# print(*(line.upper() for line in user_input()), sep='\n')
+
+# Question 10
+'''
+Write a program that accepts a sequence of whitespace separated words as input and
+prints the words after removing all duplicate words and sorting them alphanumerically.
+'''
+# word1 = set(input().split(' '))
+# list(word1).sort()
+# print(' '.join(word1))
+#
+# word2 = sorted(list(set(input().split())))
+# print(' '.join(word2))
+#
+# word3 = input().split()
+# for i in word3:
+#     if word3.count(i) > 1:
+#         word3.remove(i)
+#
+# word3.sort()
+# print(" ".join(word3))
