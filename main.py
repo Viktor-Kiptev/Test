@@ -2485,23 +2485,23 @@ def progres():
 #     except ValueError as err:
 #         return err
 
-def guess_game(user_num, answer):
-    if 0 < user_num < 11:
-        if user_num == answer:
-            print(f'Year you guess number was {answer}')
-            return True
-    else:
-        print('Pls between 1 - 10 ')
-        return False
-
-
-if __name__ == '__main__':
-    answer = random.randint(1, 10)
-    while True:
-        try:
-            user_num = int(input("Guess number between 1-10 \n "))
-            if guess_game(user_num, answer):
-                break
-        except ValueError as err:
-            print(f'You should use number {err}')
-            continue
+# def guess_game(user_num, answer):
+#     if 0 < user_num < 11:
+#         if user_num == answer:
+#             print(f'Year you guess number was {answer}')
+#             return True
+#     else:
+#         print('Pls between 1 - 10 ')
+#         return False
+#
+#
+# if __name__ == '__main__':
+#     answer = random.randint(1, 10)
+#     while True:
+#         try:
+#             user_num = int(input("Guess number between 1-10 \n "))
+#             if guess_game(user_num, answer):
+#                 break
+#         except ValueError as err:
+#             print(f'You should use number {err}')
+#             continue
