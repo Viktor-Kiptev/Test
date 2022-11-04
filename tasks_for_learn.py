@@ -255,3 +255,22 @@ prints the words after removing all duplicate words and sorting them alphanumeri
 #
 # word3.sort()
 # print(" ".join(word3))
+
+# Question 11
+
+# my_list = input().split(',')
+#
+#
+# def bin2dec(s):
+#     i = 0
+#     d = 0
+#     while len(s) > 0:
+#         d = d + int(s[-1]) * 2 ** i
+#         i = i + 1
+#         s = s[:-1]
+#     return d
+#
+# print(*(i for i in my_list if bin2dec(i) % 5 == 0), sep=',')
+# a = '0100'
+# x = int(a,2)
+# print(x)
