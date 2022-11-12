@@ -1,8 +1,8 @@
 import sys
-
 import requests
 import hashlib
 import os
+
 
 def main(args):
     for password in args:
@@ -13,12 +13,12 @@ def main(args):
             print(f'Your pass {password} not found. You can use it.')
         return 'Done!'
 
+
 def pwned_api_check(password):
     sha1password = hashlib.sha1(password.encode('utf-8')).hexdigest().upper()
     first_5_chara, tail = sha1password[:5], sha1password[5:]
     response = request_api_data(first_5_chara)
     return get_password_leaks_count(response, tail)
-
 
 
 def request_api_data(query_char):
@@ -37,4 +37,5 @@ def get_password_leaks_count(hashes, hash_to_check):
     return 0
 
 
-main(sys.argv[1:])
+if __name__ == 'main':
+    sys.exit(main(sys.argv[1:]))

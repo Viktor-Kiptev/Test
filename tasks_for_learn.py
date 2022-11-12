@@ -258,6 +258,15 @@ prints the words after removing all duplicate words and sorting them alphanumeri
 
 # Question 11
 
+'''
+Write a program which accepts a sequence of comma separated 4 digit binary numbers as 
+its input and then check whether they are divisible by 5 or not. 
+The numbers that are divisible by 5 are to be printed in a comma separated sequence.
+Example:
+0100,0011,1010,1001
+Answer:1010
+'''
+
 # my_list = input().split(',')
 #
 #
@@ -274,3 +283,56 @@ prints the words after removing all duplicate words and sorting them alphanumeri
 # a = '0100'
 # x = int(a,2)
 # print(x)
+
+# Question 12
+
+'''
+Write a program, which will find all such numbers between 1000 and 3000 (both included)
+ such that each digit of the number is an even number.
+ The numbers obtained should be printed in a comma-separated sequence on a single line.
+ 
+ Hint: In case of input data being supplied to the question, it should be assumed to be a console input
+'''
+# selected_value = []
+# for i in range(1000, 3001):
+#     check = 0
+#     for x in str(i):
+#         if ord(x) % 2 != 0:
+#             check = 1
+#     if check == 0:
+#         selected_value.append(str(i))
+# print(','.join(selected_value))
+#
+# selected_value1 = [str(i) for i in range(1000, 3001)]
+# selected_value1 = list(filter(lambda i: all(ord(j) % 2 == 0 for j in i), selected_value1))
+# print(",".join(selected_value1))
+
+# Question 13
+'''
+Write a program that accepts a sentence and calculate the number of letters and digits.
+Suppose the following input is supplied to the program:
+hello world! 123
+Then, the output should be:
+Answer:
+LETTERS 10
+DIGITS 3
+'''
+# our_str = input()
+# letters = 0
+# digits = 0
+# for i in our_str:
+#     if i.isdigit():
+#         digits +=1
+#     elif i.isalpha():
+#         letters +=1
+# print(f'LETTER {letters} \nDIGIT {digits}')
+#
+# import re
+#
+# input_string = input('> ')
+# print()
+# counter = {"LETTERS":len(re.findall("[a-zA-Z]", input_string)), "NUMBERS":len(re.findall("[0-9]", input_string))}
+#
+# print(counter)
+
+# Question 14
