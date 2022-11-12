@@ -1,39 +1,42 @@
-import requests
-import os
-import json
 import tweepy
-import config
+import time
 
-bearer_token = config.bearer_token
-search_url = "https://api.twitter.com/2/tweets/search/recent"
-
-
-query_params = {'query': '(from:twitterdev -is:retweet) OR #twitterdev', 'tweet.fields': 'author_id'}
-
-
-def bearer_oauth(r):
-    r.headers["Authorization"] = f"Bearer {bearer_token}"
-    r.headers["User-Agent"] = "v2RecentSearchPython"
-    return r
-auth = bearer_oauth()
-
-
-
-def connect_to_endpoint(url, params):
-    response = requests.get(url, auth=bearer_oauth, params=params)
-    print(response.status_code)
-    if response.status_code != 200:
-        raise Exception(response.status_code, response.text)
-    return response.json()
-
-
-
-def main():
-    json_response = connect_to_endpoint(search_url, query_params)
-    print(json.dumps(json_response, indent=4, sort_keys=True))
-
-
+consumer_key = ''
+consumer_secret = ''
+access_token = ''
+access_token_secret = ''
+auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
+auth.set_access_token(access_token, access_token_secret)
 api = tweepy.API(auth)
-pb_tw = api.home_timeline()
-for tweeet in pb_tw:
-    print(tweeet.text)
+
+user = api.me()
+print (user.name) #prints your name.
+print (user.screen_name)
+print (user.followers_count)
+
+search = "_SPQR__"
+numberOfTweets = 2
+
+def limit_handle(cursor):
+  while True:
+    try:
+      yield cursor.next()
+    except tweepy.RateLimitError:
+      time.sleep(1000)
+
+#Be nice to your followers. Follow everyone!
+for follower in limit_handle(tweepy.Cursor(api.followers).items()):
+  if follower.name == 'Usernamehere':
+    print(follower.name)
+    follower.follow()
+
+
+# Be a narcisist and love your own tweets. or retweet anything with a keyword!
+for tweet in tweepy.Cursor(api.search, search).items(numberOfTweets):
+    try:
+        tweet.favorite()
+        print('Retweeted the tweet')
+    except tweepy.TweepError as e:
+        print(e.reason)
+    except StopIteration:
+        break
