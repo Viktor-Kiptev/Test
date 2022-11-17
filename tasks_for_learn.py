@@ -449,3 +449,56 @@ Hints:
 In case of input data being supplied to the question, it should be assumed to be a console input.
 '''
 
+# import re
+# a = None
+# while a == None:
+#     password = input('Enter your pass (use a-Z@#$% and min 8 sings): ')
+#     password_patern = re.compile(r'[a-zA-Z0-9@%$#]{8,}\d$')
+#     a = password_patern.fullmatch(password)
+#     if a != None:
+#         break
+#     else:
+#         print('You wrote wrong password')
+# print('You may use it password')
+
+# import re
+# pas_list = input().split(',')
+# print(pas_list)
+# match_pas = []
+# for i in pas_list:
+#     pas_patern = re.compile('(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[$#@]).{6,12}')
+#     if pas_patern.fullmatch(i):
+#         match_pas.append(i)
+# print(','.join(match_pas))
+
+# Question 19
+
+'''
+You are required to write a program to sort the (name, age, score) tuples by
+ ascending order where name is string, age and score are numbers. 
+The tuples are input by console. The sort criteria is:
+1: Sort based on name
+2: Then sort based on age
+3: Then sort by score
+The priority is that name > age > score.
+If the following tuples are given as input to the program:
+Tom,19,80
+John,20,90
+Jony,17,91
+Jony,17,93
+Json,21,85
+Then, the output of the program should be:
+[('John', '20', '90'), ('Jony', '17', '91'), ('Jony', '17', '93'), ('Json', '21', '85'), ('Tom', '19', '80')]
+'''
+# from operator import itemgetter
+# list_of_tuple =[]
+# while True:
+#     element = tuple(input('Enter data:\n').split(','))
+#     if not element[0]:
+#         break
+#     list_of_tuple.append(element)
+# list_of_tuple = [('Tom','19','80'), ('John','20','90'), ('Jony','17','91'), ('Jony','17','93'), ('Json','21','85')]
+# list_of_tuple2 = list_of_tuple
+# list_of_tuple.sort(key=lambda x:(x[0], x[1], x[2]))
+# list_of_tuple2.sort(key=itemgetter(0,1,2))
+# print(list_of_tuple)
