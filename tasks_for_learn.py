@@ -410,7 +410,6 @@ Hints: In case of input data being supplied to the question,
 it should be assumed to be a console input.
 '''
 
-
 # def user_transactions():
 #     total = 0
 #     while True:
@@ -502,3 +501,93 @@ Then, the output of the program should be:
 # list_of_tuple.sort(key=lambda x:(x[0], x[1], x[2]))
 # list_of_tuple2.sort(key=itemgetter(0,1,2))
 # print(list_of_tuple)
+
+# Question 20
+
+'''
+Define a class with a generator which can iterate the numbers, 
+which are divisible by 7, between a given range 0 and n.
+Suppose the following input is supplied to the program: 7
+Then, the output should be:
+0
+7
+14
+Hints: Consider use class, function and comprehension.
+'''
+
+
+# class MyGen():
+#     current = 0
+#
+#     def __init__(self, first, last):
+#         self.first = first
+#         self.last = last
+#
+#     def __iter__(self):
+#         return self
+
+#     def __next__(self):
+#         if MyGen.current < self.last:
+#             num = MyGen.current
+#             MyGen.current += 7
+#             return num
+#         raise StopIteration
+#
+#
+# for i in MyGen(0, 100):
+#     print(i)
+#
+#
+# class MyGen2():
+#     def seven(self, num):
+#         for i in range(num):
+#             if i % 7 == 0:
+#                 yield i
+#
+#
+# for i in MyGen2().seven(100):
+#     print(i)
+
+# Question 21
+'''
+A robot moves in a plane starting from the original point (0,0).
+The robot can move toward UP, DOWN, LEFT and RIGHT with a given steps.
+The trace of robot movement is shown as the following:
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+The numbers after the direction are steps.
+Please write a program to compute the distance from current position 
+after a sequence of movement and original point.
+If the distance is a float, then just print the nearest integer.
+Example: If the following tuples are given as input to the program:
+UP 5
+DOWN 3
+LEFT 3
+RIGHT 2
+Then, the output of the program should be:
+2
+Hints:
+In case of input data being supplied to the question, it should be assumed to be a console input.
+Here distance indicates to euclidean distance.Import math module to use sqrt function.
+'''
+# from math import sqrt
+# moving = []
+# x,y = (0, 0)
+# while True:
+#     a = input().split()
+#     if not a:
+#         break
+#     moving.append(a)
+# for i in moving:
+#     if i[0] == 'UP':
+#         x +=int(i[1])
+#     elif i[0] == 'DOWN':
+#         x -=int(i[1])
+#     elif i[0] == 'LEFT':
+#         y -=int(i[1])
+#     elif i[0] == 'RIGHT':
+#         y +=int(i[1])
+# short_distance_from_start = round(sqrt((x**2) + (y**2)))
+# print(short_distance_from_start)

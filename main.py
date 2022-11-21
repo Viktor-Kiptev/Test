@@ -1317,8 +1317,10 @@ import random
 # def generator_function (num):
 #     for i in range (num):
 #         yield i*2
-# g = generator_function(100)
-# print(g)
+# print(generator_function(100))
+# print(generator_function(10))
+# for i in generator_function(5):
+#      print(i)
 
 # for item in generator_function(1000):
 #     print(item)
@@ -1355,9 +1357,11 @@ import random
 #         temp = n1
 #         n1 = n2
 #         n2 = temp + n2
-#
+# some_list = []
 # for x in fib(20):
-#     print(x)
+#     some_list.append(x)
+# a= some_list[10]
+# print(a)
 #
 # def fib2(num):
 #     n1 = 0
@@ -2505,4 +2509,5 @@ def progres():
 #         except ValueError as err:
 #             print(f'You should use number {err}')
 #             continue
+
 
