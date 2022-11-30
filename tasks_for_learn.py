@@ -620,3 +620,9 @@ it should be assumed to be a console input.
 # for key, value in some_dict.items():
 #     print(key, value, sep=':')
 
+# Quesztion 23
+
+'''
+Write a method which can calculate square value of number.
+Hints: Using the ** operator which can be written as n**p where means n^p
+'''
