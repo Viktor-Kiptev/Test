@@ -118,10 +118,10 @@
 
 # tuple
 
-x = (2, 1, 3, 3, 4, 6, 5)
-z, s, *r = x
-print(r)
-print(x[1:5])
-for i in range(len(x)):
-    x[i] +=3
-print(x)
+# x = (2, 1, 3, 3, 4, 6, 5)
+# z, s, *r = x
+# print(r)
+# print(x[1:5])
+# for i in range(len(x)):
+#     x[i] +=3
+# print(x)

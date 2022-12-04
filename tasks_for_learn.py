@@ -659,19 +659,34 @@ Define a class, which have a class parameter and have a same instance parameter.
 '''
 
 
-class Car:
-    name = 'Car'
+# class Car:
+#     name = 'Car'
+#
+#     def __init__(self, name = None):
+#         self.name = name
+#
+#
+# ford = Car('Edge')
+#
+# print('%s name is %s' % (Car.name, ford.name))
+#
+# vw = Car()
+# vw.name = 'Golf'
+#
+# print('%s name is %s' % (Car.name, vw.name))
 
-    def __init__(self, name = None):
-        self.name = name
+# Question 26
 
+'''
+Define a function which can compute the sum of two numbers.
+Hints: Define a function with two numbers as arguments.
+You can compute the sum in the function and return the value.
+'''
+def SumOfArgs(num1, num2):
+    return num1 + num2
+x = SumOfArgs(2, 4)
+print(x)
 
-ford = Car('Edge')
-
-print('%s name is %s' % (Car.name, ford.name))
-
-vw = Car()
-vw.name = 'Golf'
-
-print('%s name is %s' % (Car.name, vw.name))
-
+SumOfArgs2 = (lambda n1, n2: n1 + n2)
+y = SumOfArgs2(10, 12)
+print(y)
