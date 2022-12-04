@@ -659,19 +659,19 @@ Define a class, which have a class parameter and have a same instance parameter.
 '''
 
 
-# class Car:
-#     name = 'Car'
-#
-#     def __init__(self, name = None):
-#         self.name = name
-#
-#
-# ford = Car('Edge')
-#
-# print('%s name is %s' % (Car.name, ford.name))
-#
-# vw = Car()
-# vw.name = 'Golf'
-#
-# print('%s name is %s' % (Car.name, vw.name))
+class Car:
+    name = 'Car'
+
+    def __init__(self, name = None):
+        self.name = name
+
+
+ford = Car('Edge')
+
+print('%s name is %s' % (Car.name, ford.name))
+
+vw = Car()
+vw.name = 'Golf'
+
+print('%s name is %s' % (Car.name, vw.name))
 
