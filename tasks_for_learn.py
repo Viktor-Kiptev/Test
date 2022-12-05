@@ -658,7 +658,6 @@ The built-in document method is __doc__
 Define a class, which have a class parameter and have a same instance parameter.
 '''
 
-
 # class Car:
 #     name = 'Car'
 #
@@ -682,11 +681,65 @@ Define a function which can compute the sum of two numbers.
 Hints: Define a function with two numbers as arguments.
 You can compute the sum in the function and return the value.
 '''
-def SumOfArgs(num1, num2):
-    return num1 + num2
-x = SumOfArgs(2, 4)
-print(x)
+# def SumOfArgs(num1, num2):
+#     return num1 + num2
+# x = SumOfArgs(2, 4)
+# print(x)
+#
+# SumOfArgs2 = (lambda n1, n2: n1 + n2)
+# y = SumOfArgs2(10, 12)
+# print(y)
 
-SumOfArgs2 = (lambda n1, n2: n1 + n2)
-y = SumOfArgs2(10, 12)
-print(y)
+# Question 27
+
+'''
+Define a function that can convert a integer into a string
+and print it in console.
+Hints: Use str() to convert a number to string.
+'''
+
+# def ConvertStrToInt (data):
+#     if type(data) == int:
+#         return str(data)
+#     else:
+#         return f'Expected int, received {type(data)}'
+# x = 10
+# print(type(ConvertStrToInt(x)))
+# print(ConvertStrToInt(x))
+# ConvertStrToInt2 = lambda a: str(a)
+
+# Question 28
+
+'''
+Define a function that can receive two integer numbers in string
+form and compute their sum and then print it in console.
+Hints: Use int() to convert a string to integer.
+'''
+
+
+# def convert_str_and_sum():
+#     counter = 0
+#     while counter == 0:
+#         try:
+#             value = input('Enter 2 value to sum it\n').split()
+#             x, y = value
+#             try:
+#                 x, y = int(x), int(y)
+#                 counter += 1
+#                 return x + y
+#             except ValueError as err:
+#                 print(err)
+#         except ValueError or UnboundLocalError as err:
+#             print(err)
+#
+#
+# print(convert_str_and_sum())
+
+# SumStr = lambda a, b: int(a) + int(b)
+# print(SumStr('25', '55'))
+
+# Question 29
+
+'''
+
+'''
