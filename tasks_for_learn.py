@@ -741,5 +741,41 @@ Hints: Use int() to convert a string to integer.
 # Question 29
 
 '''
+Define a function that can accept two strings as input
+and concatenate them and then print it in console.
+Hints: Use + sign to concatenate the strings.
+'''
+
+# def concatenate_str(*args):
+#     result_str = ''
+#     for n in args:
+#         result_str += n
+#     return print(result_str)
+# concatenate_str('05', '12', '2', '0', '2', '2')
+# con_str = lambda a, b: a + ' ' + b
+# print(con_str('Hello', 'word'))
+
+# Question 30
 
 '''
+Define a function that can accept two strings as input and print
+the string with maximum length in console. 
+If two strings have the same length, 
+then the function should print all strings line by line.
+Hints: Use len() function to get the length of a string.
+'''
+
+# def str_len():
+#     x = []
+#     new_li = []
+#     while True:
+#         y = input('Enter text\n')
+#         if not y:
+#             break
+#         x.append(y)
+#     man_len = max(x, key=len)
+#     for i in x:
+#         if len(man_len) == len(i):
+#             new_li.append(i)
+#     print('\n'.join(new_li))
+# str_len()
