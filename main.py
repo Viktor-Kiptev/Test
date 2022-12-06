@@ -2510,4 +2510,50 @@ def progres():
 #             print(f'You should use number {err}')
 #             continue
 
+# def welkome(): # not take any argument and not return any value
+#     print('Hello, not take any argument and not return any value')
+# welkome()
+#
+# def sum(): # not take any argument but RETURN value
+#     a = 1
+#     b = 2
+#     c = 3
+#     return a+c+b
+# print(sum())
+#
+# def sum2(*args): # Take arguments and RETURN value
+#     x = 0
+#     for n in args:
+#         x +=n
+#     return x
+# print(sum2(10, 15, 20, 45))
+#
+# def sum2(*args): # Take arguments but not RETURN value
+#     x = 0
+#     for n in args:
+#         x +=n
+#     return print(f'result {x}')
+# sum2(10, 15, 20, 45)
 
+# We are creating a Class
+# class SomeClass:
+#     # We are creating some Class function
+#     def hello(self):
+#         print('thi is hello function by SomeClass')
+# # Create object of class
+# some_object = SomeClass()
+# # Call function of class using object
+# some_object.hello()
+
+
+
+class C:
+
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+        print('Constructor')
+
+test_object = C('Viktor', 34)
+print(test_object.name)
+print(test_object.age)
